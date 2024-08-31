@@ -1,0 +1,36 @@
+.sidebar-text {
+  font-size: medium;
+  color: white; /* Ensures text is visible on a black background */
+}
+
+.content-container {
+  padding-top: 20px;
+  background-color: black; /* Sets background color to black */
+  color: white; /* Ensures text is visible on a black background */
+}
+
+.sidebar-logo {
+  padding: 15px 15px 15px 30px;
+  font-size: 20px;
+  text-align: right;
+  background-color: black; /* Sets background color to black */
+  color: white; /* Ensures text is visible */
+  width: 100%;
+}
+
+.logoutbtn {
+  border: none;
+  background: transparent;
+  color: white; /* Ensures text is visible on a black background */
+  border-radius: 15px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+}
+
+.logoutbtn:hover {
+  cursor: pointer;
+  background-color: #f03e3e; /* Red background color on hover */
+  padding: 5px 10px;
+  border-radius: 15px;
+}
