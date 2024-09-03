@@ -1,139 +1,219 @@
-.continer
-{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 4px 4px 35px 8px darkgray;
-    margin: 3% 5% 3% 5%;
-    padding: 3%;
-}
-.chapter-list
-
-{
-    margin-top: -36%;
-    float: right;
-    overflow-y: scroll;
-    padding: 2%;
-    box-shadow: 4px 4px 25px 8px darkgray;
-    background-color: white;
-    width: 36%;
-    height: 380px;
-}
-.chapter-list::-webkit-scrollbar {
-    width: 8px;
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
   }
-.chapter-list::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-.chapter-list::-webkit-scrollbar-thumb {
-    background: rgb(6, 122, 117);
-  }
-.chapter-list::-webkit-scrollbar-thumb:hover {
-    background: rgb(3, 54, 52);
-  }
-#select-box
-
-{
-    width: 25px; 
-    height: 25px; 
-    align-items: center;
-    border: 1px solid black;
-    align-content: center;
-    cursor: pointer;
-    padding: 2px;
-    vertical-align: middle;
-    border-radius: 5px; 
-    background-color: white;
-}
-.selected
-{
-    background-color: #e1e3e2;
-}
-.name
-{
-    font-weight: bolder;
-    font-size: 18px;
-    margin-top: -8.5%;
-    cursor: pointer;
-    margin-left: 12%;
-    color: rgb(6, 54, 47);
-    font-family: 'Segoe UI', sans-serif;
-}
-.chapter1, .chapter2, .chapter3, .chapter4, .chapter5, .chapter6, .chapter7, .chapter8    
-{
-    padding: 3%;
-}
-.fa-check
-{
-    font-weight: bolder;
-    color: white;
-    vertical-align: middle;
-    font-size: large;
+  
+  .course-header {
     display: flex;
-}
-.sub-container
-{
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 4px 4px 15px 8px darkgray;
-    margin-top: 2%;
-    padding: 1%;
-    width: 100%;
-}
-.sub-btns
-{
-    background-color: white;
-    padding: 3%;
-}
-.btn-info
-{
-    margin-right: 4%;
-    border: none;
-    outline: none;
-    background-color: white;
-    font-size: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-welcome {
     font-weight: bolder;
-    cursor: pointer;
-}
-.btn-info:active, .btn-info:focus, .btn-info:hover
-{
-    border: none;
-    outline: none;
-    box-shadow: none;
-    background-color: white;
-}
-.descriptions
-{
-    margin-left: 15%;
-    margin-right: 10%;
-    background-color: white;
-}
-.certificate
-{
-    opacity: 0.6; 
-    border: 1px solid black; 
-    font-weight: bolder; 
-    margin-left: 22%; 
-    cursor: pointer;
-    margin-top: 2%; 
-    display: inline-block; 
-    background-color: white; 
-    padding: 5px 30px 5px 30px;
-}
-#searchtxt
-{
+    color: darkgreen;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .course-header youtube-player {
+    max-width: 100%;
+  }
+  
+  .chapter-list {
+    margin-top: 20px;
+  }
+  
+  .chapter-header {
     font-weight: bold;
-    background-color: rgb(238, 236, 236);
-    padding: 1%;
-    margin-top: -5.4%;
-    width: 70%;
-    margin-bottom: 4%;
-}
-#questions, #notestxt
-{
+    font-size: large;
+    color: darkred;
+  }
+  
+  .chapter-subtext {
+    color: gray;
+    font-weight: 400;
+    font-size: small;
+    margin-bottom: 10px;
+  }
+  
+  .no-chapters {
+    color: red;
+    font-size: medium;
+    font-weight: bolder;
+    margin-top: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+  
+  .chapter-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .chapter-box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .chapter-name {
     font-weight: bold;
-    background-color: rgb(243, 241, 241);
-    padding: 2%;
-    margin-top: 3%;
-    margin-bottom: 8%;
-    width: 70%;
+  }
+  
+  .chapter-subcontents {
+    color: gray;
+    font-weight: 600;
+    font-size: small;
+    margin-left: 12%;
+  }
+  
+  .sub-container {
+    margin-top: 40px;
+  }
+  
+  .sub-btns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .sub-btns .btn {
+  /* Ensure the layout is responsive */
+@media (max-width: 1200px) {
+    .container {
+      padding: 15px;
+    }
 }
+    .course-header {
+      font-size: 24px;
+    }
+  
+    youtube-player {
+      width: 100%;
+      height: auto;
+    }
+  
+    .sub-btns {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sub-btns .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .course-welcome {
+      font-size: 20px;
+    }
+  
+    .chapter-header {
+      font-size: medium;
+    }
+  
+    .chapter-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .chapter-box {
+      margin-bottom: 5px;
+    }
+  
+    .chapter-subcontents {
+      margin-left: 0;
+    }
+  
+    .sub-container {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .course-welcome {
+      font-size: 18px;
+    }
+  
+    youtube-player {
+      height: 220px;
+    }
+  
+    .chapter-header {
+      font-size: small;
+    }
+  
+    .chapter-item {
+      margin-bottom: 15px;
+    }
+  
+    .sub-btns .btn {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .descriptions {
+      font-size: small;
+    }
+  
+    .qa-search input {
+      width: 100%;
+    }
+  
+    .course-details {
+      font-size: small;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .course-welcome {
+      font-size: 16px;
+    }
+  
+    youtube-player {
+      height: 180px;
+    }
+  
+    .chapter-header {
+      font-size: small;
+    }
+  
+    .chapter-item {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  
+    .sub-btns .btn {
+      font-size: small;
+      margin-bottom: 5px;
+    }
+  
+    .descriptions {
+      font-size: x-small;
+    }
+  
+    .qa-search input {
+      width: 100%;
+      font-size: x-small;
+    }
+  
+    .download-material {
+      font-size: small;
+    }
+  }
+  
+
+
+  

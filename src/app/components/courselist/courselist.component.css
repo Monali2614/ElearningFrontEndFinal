@@ -33,3 +33,89 @@
    color: rgb(9, 40, 41);
    background-color: white;
  }
+
+
+ #coursedetailscard-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh; /* Full height of the viewport */
+   margin: 0; /* Remove any margin */
+ }
+ 
+ .responsive-card {
+   box-shadow: 2px 2px 15px 8px rgb(147, 158, 147);
+   padding-left: 3%;
+   border-radius: 10px;
+   background-color: white;
+   width: 100%;
+   max-width: 520px;
+ }
+ 
+ /* For larger screens */
+ @media (min-width: 768px) {
+   .responsive-card {
+     margin: 0 auto;
+   }
+ }
+ 
+ /* For tablets and smaller screens */
+ @media (max-width: 767px) {
+   .responsive-card {
+     width: 90%;
+     margin: 0 auto;
+   }
+ }
+ 
+ /* For mobile screens */
+ @media (max-width: 480px) {
+   .responsive-card {
+     width: 100%;
+     padding-left: 5%;
+     padding-right: 5%;
+   }
+ }
+ 
+
+ .enrollment-container {
+   display: flex;
+   justify-content: center; /* Align buttons horizontally center */
+   margin-bottom: 10px;
+ }
+ 
+ .enroll-btn, .enrolled-btn {
+   margin-right: 8%;
+   margin-left: 3%;
+ }
+ 
+ .course-actions-container {
+   display: flex;
+   justify-content: center; /* Align buttons horizontally center */
+   margin-bottom: 15px;
+ }
+ 
+ .action-btn {
+   margin-right: 10px;
+ }
+ 
+ .wishlist-container {
+   display: flex;
+   justify-content: flex-end; /* Align wishlist buttons to the right */
+   margin-right: 5%;
+ }
+ 
+ .wishlist-action {
+   display: inline-block;
+ }
+ 
+ .wishlist-btn, .wishlist-liked-btn {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   font-weight: bolder;
+ }
+ 
+ .wishlist-btn i, .wishlist-liked-btn i {
+   color: red;
+ }
+ 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
 
@@ -173,4 +173,116 @@ letter-spacing: 1px;
 font-size: 20px;
 font-weight: 600;
 color: darkred;
+} */
+
+
+
+
+
+
+
+
+
+
+
+.imageouter {
+  width: 150px;
+  height: 150px;
+}
+.imageouter img {
+  width: 100%;
+  height: 100%;
+}
+
+.mainwrpper {
+  display: flex;
+}
+.sidebar-container {
+  max-width: 300px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.sidebar-navigation {
+  width: 203px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-navigation li {
+  padding: 15px;
+  font-size: larger;
+  line-height: 20px;
+  margin-top: 8%;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.sidebar-navigation li:hover {
+  background-color: #c92d2d;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  color: maroon;
+  font-weight: bolder;
+}
+
+.dashboard-subtitle {
+  font-size: 20px;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.dashboard-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.4s;
+  box-shadow: 5px 10px 18px #888888;
+  padding: 20px;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+}
+
+.circle {
+  margin:auto;
+  border-radius: 50%;
+  width: 80px;
+}
+
+#icons {
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text {
+  font-size: 1.5em;
+  color: rgb(5, 44, 42);
+}
+
+.sub-text {
+  font-size: 1.2em;
+  color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .dashboard-subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
 }
