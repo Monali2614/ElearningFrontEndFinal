@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Course } from '../models/course';
 import { Enrollment } from '../models/enrollment';
 import { Wishlist } from '../models/wishlist';
+import { User } from '../models/user';
+import { catchError, map } from 'rxjs/operators';
 
 const NAV_URL = environment.apiURL;
 
@@ -98,7 +100,6 @@ export class UserService {
 
   postimage(email:string,FormData:FormData):Observable<any>
   {
-    // http://localhost:8080/profile/uploadimage/sharda@gmail.com
     console.log(email);
     return this._http.post<any>(`${NAV_URL}/profile/uploadimage/${email}`,FormData);
   }
@@ -108,4 +109,33 @@ export class UserService {
   }
 
 
+  getProfileImage(userEmail: string): Observable<any> {
+    return this._http.get(`${NAV_URL}/profile/getimage/${userEmail}`, { responseType: 'blob' });
+  }
+
+
+  getUserByEmail(email: string): Observable<User> {
+    return this._http.get<User>(`${NAV_URL}/getuser/${email}`);
+  }
+
+  getUserImage(userEmail: string): Observable<string> {
+    return this._http.get(`${NAV_URL}/profile/getprofile/${userEmail}`, {
+      responseType: 'arraybuffer'
+    }).pipe(
+      map(response => {
+        let binary = '';
+        const bytes = new Uint8Array(response);
+        const len = bytes.byteLength;
+        for (let i = 0; i < len; i++) {
+          binary += String.fromCharCode(bytes[i]);
+        }
+        return window.btoa(binary); // Convert to base64 string
+      }),
+      catchError(error => {
+        console.error('Error fetching image', error);
+        return of('');
+      })
+    );
+  }
+  
 }

@@ -16,6 +16,7 @@ export class UserlistComponent implements OnInit {
   imageData: string = '';
   editingProfile: boolean = false; 
   loggedUser="";
+  userEmail: string | null = null;
 
   constructor(private _serive : UserService,private http: HttpClient) { }
 
@@ -27,16 +28,14 @@ export class UserlistComponent implements OnInit {
   }
 
 
-  loadProfileImage(): void {
-    const userEmail = this.loggedUser;
-    this.http.get(`http://localhost:8080/profile/getprofile/${userEmail}`, { responseType: 'blob' })
-      .subscribe(
-        response => this.createImageFromBlob(response),
-        error => {
-          console.error('Error fetching image:', error);
-        }
-      );
+  loadUserProfile(): void {
+    if (this.userEmail) {
+      this._serive.getUserImage(this.userEmail).subscribe(data => {
+        this.imageData = `data:image/jpeg;base64,${data}`;
+      });
+    }
   }
+
 
   createImageFromBlob(image: Blob): void {
     let reader = new FileReader();

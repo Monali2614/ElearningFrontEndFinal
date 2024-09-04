@@ -4,6 +4,7 @@ import { Professor } from 'src/app/models/professor';
 import { User } from 'src/app/models/user';
 import { LoginService } from 'src/app/services/login.service';
 import * as $ from 'jquery';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 @Component({
 
@@ -18,9 +19,10 @@ export class LoginComponent implements OnInit {
   msg = "";
   adminEmail = "";
   adminPassword = "";
-console: any;
+  console: any;
   
-  constructor(private _service : LoginService, private _router : Router) { }
+  constructor(private _service : LoginService, private _router : Router,
+    private authService: AuthServiceService) { }
 
   ngOnInit(): void 
   {
@@ -71,29 +73,34 @@ console: any;
     console.log('handleClick() method called');
     console.log('Clicked forgot password');
   }
-  loginUser()
-  
-  {
-      this._service.loginUserFromRemote(this.user).subscribe(
-        (data: any) => {
-          console.log(data);
-          console.log("Response Received");
-          sessionStorage.setItem('loggedUser', this.user.email);
-          sessionStorage.setItem('USER', "user");
-          sessionStorage.setItem('ROLE', "user");
-          sessionStorage.setItem('name', this.user.email);
-          sessionStorage.setItem('gender', "male");
-          sessionStorage.setItem('username',data.username);
-         
-          this._router.navigate(['/userdashboard']);
-        },
-        (error: { error: any; }) => {
-          console.log(error.error);
-          this.msg="Bad credentials, please enter valid credentials !!!";
-        }
-      )
-  }
+  loginUser() {
+    this._service.loginUserFromRemote(this.user).subscribe(
+      (data: any) => {
+        console.log(data);
+        console.log("Response Received");
+        this.authService.setCurrentUser(this.user);
 
+  
+        // Store user details in session storage
+        sessionStorage.setItem('loggedUser', this.user.email);
+        sessionStorage.setItem('USER', "user");
+        sessionStorage.setItem('ROLE', "user");
+        sessionStorage.setItem('name', this.user.email);
+        sessionStorage.setItem('gender', data.gender || "male"); // Assuming gender comes from the response
+        sessionStorage.setItem('username', data.username);
+  
+
+  
+        // Navigate to user dashboard
+        this._router.navigate(['/userdashboard']);
+      },
+      (error: { error: any }) => {
+        console.log(error.error);
+        this.msg = "Bad credentials, please enter valid credentials !!!";
+      }
+    );
+  }
+  
   loginProfessor()
   {
       this._service.loginProfessorFromRemote(this.professor).subscribe(

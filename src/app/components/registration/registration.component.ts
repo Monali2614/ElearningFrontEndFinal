@@ -31,7 +31,8 @@ export class RegistrationComponent implements OnInit {
   showPassword = false;
   showConfirmPassword = false;
 
-  constructor(private _registrationService : RegistrationService, private _professorService : ProfessorService, private _router : Router) { }
+  constructor(private _registrationService : RegistrationService, private _professorService : ProfessorService, private _router : Router)
+   { }
 
   ngOnInit(): void 
   {
@@ -59,6 +60,10 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
+  isExperienceValid(): boolean {
+    return Number(this.professor.experience) >= 0;
+
+  }
   isPasswordValid1(password:string) {
     password = this.user.password;
    const minLength = 6;

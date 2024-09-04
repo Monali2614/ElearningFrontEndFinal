@@ -1,7 +1,7 @@
-<app-header> </app-header>
+<app-header></app-header>
 
 <div class="row" id="profilecard">
-    <div *ngFor="let user of profileDetails | async" id="bloodCards">
+    <div *ngIf="user" id="bloodCards">
         <a>
             <div style="text-align: right;height: 25px; ">
               <img [src]="imageData" alt="User Image" *ngIf="!editingProfile" class="profile-image">
@@ -16,22 +16,22 @@
             <div class="text"><b class="element" style="margin-left: 6%;"> {{user.gender}}</b> </div>
             <div class="text"><b class="element" style="margin-left: 6%;"> {{user.profession}}</b> </div>
             <div class="text"><b class="element" style="margin-left: 6%;"> {{user.email}}</b> </div>
-            <div class="btndiv" style="align-items: center;"><button class="editbtn" (click)="editProfile()"><i class="fa fa-edit"></i> edit</button></div>
-            <small id="message" *ngIf="temp === true" style="text-align: center; margin-top: 3%; color: green;"><b>Profile Updated Successfully !!!</b></small> 
+
+            <small id="message" *ngIf="temp" style="text-align: center; margin-top: 3%; color: green;"><b>Profile Updated Successfully !!!</b></small> 
           </div>
     </div>
 </div>
   
-<div  class="container register" id="profileform">
+<div class="container register" id="profileform">
     <div class="row">
         <div class="col-md-9 register-right">
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="textual">Update User Profile</h3>
-                    <small *ngIf="temp === false" style="font-weight: bold; margin-left: 25%; text-align: center; color: darkgreen;"><b>Dear {{loggedUser}}, update your profile here</b></small>
-                    <small *ngIf="temp === true" style="text-align: center; color: green;"><b>Profile Updated Successfully !!!</b></small>  
+                    <small *ngIf="!temp" style="font-weight: bold; margin-left: 25%; text-align: center; color: darkgreen;"><b>Dear {{user.username}}, update your profile here</b></small>
+                    <small *ngIf="temp" style="text-align: center; color: green;"><b>Profile Updated Successfully !!!</b></small>  
                     <form #Updateform="ngForm" style="margin-top: -15%;" (ngSubmit)="updateUserProfile()">
-                        <div *ngFor="let user of profileDetails | async" class="row register-form">
+                        <div *ngIf="user" class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="user name *" name="username" [(ngModel)]="user.username" required 
@@ -46,8 +46,8 @@
                                     [(ngModel)]="user.gender" 
                                     required 
                                     #usergender="ngModel"
-                                    [class.is-invalid]="usergender.invalid && usergender.touched" required>
-                                    <option value="" disabled selected>Select gender *</option>
+                                    [class.is-invalid]="usergender.invalid && usergender.touched">
+                                    <option value="" disabled>Select gender *</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                     <option value="Other">Other</option>
@@ -90,44 +90,19 @@
                                     [class.is-invalid]="useraddress.invalid && useraddress.touched">
                                     <small class="text-danger" [class.d-none]="useraddress.valid || useraddress.untouched"><b>required field</b></small>
                                 </div>
-                                <!-- <div class="form-group">
-                                    <input type="password" class="form-control"  placeholder="Confirm Password *" name="ConfirmPassword" (ngModel)="user.password" required 
-                                    #userconfirmPassword="ngModel"
-                                    [class.is-invalid]="userconfirmPassword.invalid && userconfirmPassword.touched">
-                                    <small class="text-danger" [class.d-none]="(userconfirmPassword.value == userpassword.value) || userconfirmPassword.untouched"><b>password not matched</b></small>
-                                </div> -->
-
-                                <body>
-                                    <div class="container">
-                                        <form (ngSubmit)="onSubmit(user.email)" #uploadForm="ngForm" enctype="multipart/form-data">
-                                            <div class="form-group">
-                                                <label for="file" class="upload-label">
-                                                    <input type="file" id="file" (change)="onFileSelected($event)" required>
-                                                    <span>Select Image</span>
-                                                </label>
-                                                <button type="submit" [disabled]="!selectedFile" class="link-button">Upload Image</button>
-                                            </div>
-                                                <div *ngIf="selectedFileName" class="file-name">
-                                                    {{ selectedFileName }}
-                                                </div>
-                                            
-                                            <!-- <button type="submit" [disabled]="!selectedFile">Upload Image</button> -->
-
-                                        </form>
-                                    </div>
-                                </body>
-
-
-
+                                <div class="form-group">
+                                    <input type="file" (change)="onFileSelected($event)" class="form-control" />
+                                    <label class="text-danger">{{selectedFileName}}</label>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary" [disabled]="Updateform.invalid" (click)="updateUserProfile()">Update</button>
+                                    <button class="btn btn-secondary" (click)="uploadProfileImage()">Upload Profile Image</button>
+                                </div>
                             </div>
                         </div>
-                        <button [disabled]="Updateform.form.invalid" type="submit" class="btn registerbtn">Update</button>
-                </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-<app-footer></app-footer>

@@ -8,11 +8,11 @@
 {
     max-width: 450px;
     padding: 3px 40px 40px 40px;
-    margin-top: 2%; 
-    margin-bottom: 3%; 
-    border-radius: 10px; 
-    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
-    border-top: 8px solid rgb(22, 19, 27); 
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147);
+    border-top: 8px solid rgb(22, 19, 27);
     background-color: rgb(245, 234, 240);
 }
 input{
@@ -21,8 +21,8 @@ input{
 }
 .textual
 {
-    color: rgb(64, 85, 15); 
-    text-align: center; 
+    color: rgb(64, 85, 15);
+    text-align: center;
     margin-top: -20px;
     font-family: 'Aladin', cursive;
     padding: 5px;
@@ -40,7 +40,7 @@ input{
     justify-content: center;
     align-items: center;
     color: rgb(6, 6, 6);
-    margin: auto;  
+    margin: auto;
     border: 1px solid black;
     margin-top: 10px;
 }
@@ -137,11 +137,11 @@ input{
 {   position: relative;
     max-width: 450px;
     padding: 3px 40px 40px 40px;
-    margin-top: 2%; 
-    margin-bottom: 3%; 
-    border-radius: 10px; 
-    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
-    border-top: 8px solid rgb(22, 19, 27); 
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147);
+    border-top: 8px solid rgb(22, 19, 27);
     background-color: rgb(245, 234, 240);
 }
 input{
@@ -150,8 +150,8 @@ input{
 }
 .textual
 {
-    color: rgb(64, 85, 15); 
-    text-align: center; 
+    color: rgb(64, 85, 15);
+    text-align: center;
     margin-top: -20px;
     font-family: 'Aladin', cursive;
     padding: 5px;
@@ -169,7 +169,7 @@ input{
     justify-content: center;
     align-items: center;
     color: rgb(6, 6, 6);
-    margin: auto;  
+    margin: auto;
     border: 1px solid black;
     margin-top: 10px;
 }
@@ -241,7 +241,7 @@ input{
 .headbtn1, .headbtn2, .headbtn3{
     border: none;
     padding: 2% 20px 2% 20px;
-    width: 122px;
+    width: 115px;
     font-weight: bold;
     background-color: transparent;
     margin-left: 0px;
@@ -282,4 +282,101 @@ input{
     width: 20px;
     height: 20px;
     margin-right: 5px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;  /* Aligns checkbox and text vertically */
+  margin-top: 10px; /* Adds space above the checkbox container */
+}
+
+.checkbox input[type="checkbox"] {
+  margin-right: 5px; /* Space between checkbox and text */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      max-width: 90%; /* Adjust the container width for smaller screens */
+      padding: 20px; /* Reduce padding for smaller screens */
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+
+  .textual {
+      font-size: 1.5rem; /* Reduce font size for smaller screens */
+      margin-top: 0px; /* Adjust the margin for better alignment */
+  }
+
+  input {
+      margin-top: 10px; /* Adjust the margin for inputs */
+      width: 100%; /* Make inputs full width */
+  }
+
+  .loginbtn {
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+      border-radius: 12px;
+      font-size: 1rem; /* Adjust font size */
+  }
+
+  .loginbtn:hover {
+      padding: 8px 18px; /* Adjust hover state padding for consistency */
+  }
+
+  .fa-google, .fa-linkedin, .fa-windows, .fa-github, .fa-twitter, .fa-apple {
+      font-size: 1.5em; /* Adjust icon size for smaller screens */
+  }
+
+  .fa-google:hover, .fa-linkedin:hover, .fa-windows:hover, .fa-github:hover, .fa-twitter:hover, .fa-apple:hover {
+      font-size: 2em; /* Adjust hover size for smaller screens */
+      transition: 0.5s ease-out; /* Faster transition on smaller screens */
+  }
+
+  .close-btn {
+      top: -10px;
+      right: 5px;
+  }
+
+  .close-btn span {
+      font-size: 35px; /* Adjust close button size */
+  }
+
+  .headbtn1, .headbtn2, .headbtn3 {
+      padding: 2% 10px; /* Adjust button padding */
+      width: 100px; /* Adjust button width */
+      font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .headbtn1, .headbtn2, .headbtn3:hover {
+      background-color: rgb(231, 166, 166); /* Ensure hover effect is consistent */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      padding: 15px; /* Further reduce padding for very small screens */
+  }
+
+  .textual {
+      font-size: 1.2rem; /* Further reduce font size */
+  }
+
+  .loginbtn {
+      padding: 8px 16px; /* Adjust padding */
+      font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .fa-google, .fa-linkedin, .fa-windows, .fa-github, .fa-twitter, .fa-apple {
+      font-size: 1.3em; /* Further adjust icon size */
+  }
+
+  .fa-google:hover, .fa-linkedin:hover, .fa-windows:hover, .fa-github:hover, .fa-twitter:hover, .fa-apple:hover {
+      font-size: 1.7em; /* Adjust hover size */
+  }
+
+  .close-btn span {
+      font-size: 30px; /* Further adjust close button size */
+  }
+
+  .headbtn1, .headbtn2, .headbtn3 {
+      width: 90px; /* Further adjust button width */
+  }
 }
