@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .continer {
   background-color: white;
   border-radius: 10px;
@@ -361,7 +361,7 @@
     margin-bottom: 15px; /* Reduce margin for tighter layout */
   }
 }
-=======
+
 .container {
     padding: 20px;
     max-width: 1200px;
@@ -579,6 +579,3 @@
   }
   
 
-
-  
->>>>>>> origin/master

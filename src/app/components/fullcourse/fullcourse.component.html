@@ -1,6 +1,5 @@
-<app-header></app-header>
+<app-header> </app-header>
 
-<<<<<<< HEAD
 <div class="continer">
   <div>
     <div
@@ -262,64 +261,14 @@
       <hr *ngIf="chapter.chapter8name !== ''" />
     </div>
   </div>
-=======
-<div class="container">
-  <div class="course-header">
-    <div class="course-welcome">
-      Welcome to {{courseName}} course 👋
-    </div>
-    <youtube-player
-      id="player"
-      [videoId]="video"
-      suggestedQuality="highres"
-      [height]="380"
-      [width]="640"
-    ></youtube-player>
-  </div>
-
-  <div class="chapter-list" *ngFor="let chapter of chapterlist | async">
-    <div class="chapter-header">
-      <i class="fa fa-list"></i> Course Contents
-    </div>
-    <div class="chapter-subtext">
-      (click on chapter name to get into the videos)
-    </div>
-
-    <div
-      class="no-chapters"
-      *ngIf="chapter.chapter1name === ''"
-    >
-      Currently No Chapters available for this Course. Please wait, the
-      Instructor will be adding the chapters soon here
-    </div>
-
-    <div
-      class="chapter-item"
-      *ngIf="chapter.chapter1name !== ''"
-      (click)="openChapter(chapter.chapter1id)"
-    >
-      <div class="chapter-box"><i class="fa fa-check"></i></div>
-      <div class="chapter-name">1) {{chapter.chapter1name}}</div>
-      <div class="chapter-subcontents">subcontents (1/1)</div>
-    </div>
-    <hr *ngIf="chapter.chapter1name !== ''">
-
-    <!-- Repeat the pattern for chapters 2 to 8 -->
-  </div>
-
->>>>>>> origin/master
   <div class="sub-container">
     <div class="sub-btns">
       <button id="overview-btn" (click)="openOverview()" class="btn btn-info">
         Overview
       </button>
-<<<<<<< HEAD
       <button id="qa-btn" (click)="openQandA()" class="btn btn-info">
         Q&A
       </button>
-=======
-      <button id="qa-btn" (click)="openQandA()" class="btn btn-info">Q&A</button>
->>>>>>> origin/master
       <button id="downloads-btn" (click)="openDownloads()" class="btn btn-info">
         Downloads
       </button>
@@ -335,7 +284,6 @@
       </button>
       <hr />
     </div>
-<<<<<<< HEAD
     <div
       id="overview"
       class="descriptions"
@@ -450,49 +398,11 @@
           style="font-weight: large; margin-left: 10%"
           >Get the certificate by completing entire course</label
         >
-=======
-
-    <div id="overview" class="descriptions" *ngFor="let course of courselist | async">
-      <strong class="course-title">About this Course</strong>
-      <h3 class="course-subtitle">{{course.coursename}}</h3>
-      <h6 class="course-badge">{{course.courseid}}</h6>
-      <hr />
-
-      <p class="course-description">
-        <b>{{course.description}}</b>
-      </p>
-      <hr />
-
-      <div class="course-details">
-        <div><b>Level:</b> {{course.skilllevel}}</div>
-        <div><b>Language:</b> {{course.language}}</div>
-        <div><b>Course Type:</b> {{course.coursetype}} contents</div>
-        <div><b>Instructor:</b> {{course.instructorname}} - {{course.instructorinstitution}}</div>
-        <div><b>Enrolled Date:</b> {{course.enrolleddate}}</div>
-        <div><b>Learners:</b> {{course.enrolledcount}} learners enrolled previously</div>
-      </div>
-      <hr />
-
-      <div class="course-features">
-        <strong>Features</strong>
-        <label>
-          Available on
-          <span class="feature-highlight">Android</span> and
-          <span class="feature-highlight">iOS</span>
-        </label>
-      </div>
-      <hr />
-
-      <div class="course-certificate">
-        <strong>Certificate</strong>
-        <label>Get the certificate by completing entire course</label>
->>>>>>> origin/master
         <br />
         <div [routerLink]="['/certificate']" class="certificate">
           Certificate
         </div>
       </div>
-<<<<<<< HEAD
       <hr style="margin-top: 2%; margin-bottom: 2%" />
     </div>
     <div id="qa" style="padding-bottom: 5%" class="descriptions">
@@ -508,13 +418,6 @@
           cursor: pointer;
         "
       >
-=======
-      <hr />
-    </div>
-
-    <div id="qa" class="descriptions">
-      <div class="qa-search">
->>>>>>> origin/master
         <i class="fa fa-search"></i>
       </div>
       <input
@@ -527,7 +430,6 @@
       <strong
         id="newQA"
         (click)="newQuestion()"
-<<<<<<< HEAD
         style="
           font-size: large;
           font-weight: bolder;
@@ -539,20 +441,12 @@
       >
       <textarea
         type="text"
-=======
-        class="ask-question"
-      >
-        Ask a New Question?
-      </strong>
-      <textarea
->>>>>>> origin/master
         id="questions"
         rows="4"
         class="form-control"
         placeholder="ask your questions here..."
       ></textarea>
     </div>
-<<<<<<< HEAD
     <div
       id="downloads"
       *ngFor="let chapter of chapterlist | async"
@@ -570,13 +464,6 @@
           margin-bottom: 5%;
           margin-right: 10%;
         "
-=======
-
-    <!-- <div id="downloads" *ngFor="let chapter of chapterlist | async" class="descriptions">
-      <div
-        id="downloadalert"
-        class="no-downloads"
->>>>>>> origin/master
         *ngIf="chapter.chapter1name === ''"
       >
         Currently No Resources available for download. Please wait, the
@@ -584,7 +471,6 @@
         here
       </div>
       <div *ngIf="chapter.chapter1name !== ''">
-<<<<<<< HEAD
         <strong
           id="downloadtxt"
           style="
@@ -614,20 +500,10 @@
               font-weight: bolder;
               font-size: large;
             "
-=======
-        <strong id="downloadtxt" class="download-material">
-          View and download your course related materials here ...
-        </strong>
-        <div class="download-buttons">
-          <button
-            type="button"
-            class="btn btn-warning btn-sm"
->>>>>>> origin/master
             (click)="openDoc()"
           >
             View Material
           </button>
-<<<<<<< HEAD
           <button
             type="button"
             class="btn btn-success btn-sm"
@@ -723,11 +599,3 @@
 
 <br /><br />
 <app-footer></app-footer>
-=======
-         
-        </div>
-      </div>
-    </div> -->
-  </div>
-</div>
->>>>>>> origin/master
