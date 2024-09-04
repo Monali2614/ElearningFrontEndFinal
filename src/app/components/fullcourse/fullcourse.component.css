@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .continer {
   background-color: white;
   border-radius: 10px;
@@ -360,3 +361,224 @@
     margin-bottom: 15px; /* Reduce margin for tighter layout */
   }
 }
+=======
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .course-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .course-welcome {
+    font-weight: bolder;
+    color: darkgreen;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .course-header youtube-player {
+    max-width: 100%;
+  }
+  
+  .chapter-list {
+    margin-top: 20px;
+  }
+  
+  .chapter-header {
+    font-weight: bold;
+    font-size: large;
+    color: darkred;
+  }
+  
+  .chapter-subtext {
+    color: gray;
+    font-weight: 400;
+    font-size: small;
+    margin-bottom: 10px;
+  }
+  
+  .no-chapters {
+    color: red;
+    font-size: medium;
+    font-weight: bolder;
+    margin-top: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+  
+  .chapter-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .chapter-box {
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .chapter-name {
+    font-weight: bold;
+  }
+  
+  .chapter-subcontents {
+    color: gray;
+    font-weight: 600;
+    font-size: small;
+    margin-left: 12%;
+  }
+  
+  .sub-container {
+    margin-top: 40px;
+  }
+  
+  .sub-btns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .sub-btns .btn {
+  /* Ensure the layout is responsive */
+@media (max-width: 1200px) {
+    .container {
+      padding: 15px;
+    }
+}
+    .course-header {
+      font-size: 24px;
+    }
+  
+    youtube-player {
+      width: 100%;
+      height: auto;
+    }
+  
+    .sub-btns {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sub-btns .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .course-welcome {
+      font-size: 20px;
+    }
+  
+    .chapter-header {
+      font-size: medium;
+    }
+  
+    .chapter-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .chapter-box {
+      margin-bottom: 5px;
+    }
+  
+    .chapter-subcontents {
+      margin-left: 0;
+    }
+  
+    .sub-container {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .course-welcome {
+      font-size: 18px;
+    }
+  
+    youtube-player {
+      height: 220px;
+    }
+  
+    .chapter-header {
+      font-size: small;
+    }
+  
+    .chapter-item {
+      margin-bottom: 15px;
+    }
+  
+    .sub-btns .btn {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .descriptions {
+      font-size: small;
+    }
+  
+    .qa-search input {
+      width: 100%;
+    }
+  
+    .course-details {
+      font-size: small;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .course-welcome {
+      font-size: 16px;
+    }
+  
+    youtube-player {
+      height: 180px;
+    }
+  
+    .chapter-header {
+      font-size: small;
+    }
+  
+    .chapter-item {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  
+    .sub-btns .btn {
+      font-size: small;
+      margin-bottom: 5px;
+    }
+  
+    .descriptions {
+      font-size: x-small;
+    }
+  
+    .qa-search input {
+      width: 100%;
+      font-size: x-small;
+    }
+  
+    .download-material {
+      font-size: small;
+    }
+  }
+  
+
+
+  
+>>>>>>> origin/master
