@@ -1,0 +1,96 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+  }
+  
+  .carousel-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.5s ease;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    width: 250px; /* Default image size */
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  /* Active class targets the entire item, making the image larger */
+  .carousel-item.active img {
+    width: 350px; /* Increased size of the active image */
+    transform: scale(1.2); /* Slightly enlarge the active image */
+    z-index: 1;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem;
+    z-index: 2;
+  }
+  
+  .carousel-control.prev {
+    left: 15px;
+  }
+  
+  .carousel-control.next {
+    right: 15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .carousel-item img {
+      width: 200px; /* Smaller image size for tablets */
+    }
+  
+    .carousel-item.active img {
+      width: 260px;
+    }
+  
+    .carousel-control {
+      font-size: 2rem;
+      padding: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-item img {
+      width: 150px; /* Even smaller for mobile */
+    }
+  
+    .carousel-item.active img {
+      width: 200px;
+    }
+  
+    .carousel-control {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+  
+    .carousel-item {
+      margin: 0 10px; /* Reduce spacing between images */
+    }
+  }

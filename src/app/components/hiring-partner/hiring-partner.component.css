@@ -1,0 +1,469 @@
+/* General Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width:max-content;
+  margin: 0 auto;
+}
+ 
+/* Header Styling */
+.header {
+  background-color:#d6f5ff;
+  padding: 15px;
+  text-align:left;
+  border-radius: 10px 10px 10px 10px;
+}
+ 
+.header h2 {
+  font-size: 2rem;
+  color: #000;
+  margin: 0;
+}
+ 
+/* 500+ Hiring Partners Section */
+.hiring-partners-container {
+  background-color: #f8f9fa;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height:max-content;
+}
+ 
+.hiring-partners-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+ 
+.hiring-partners-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  text-align:left;
+}
+ 
+.hiring-partners-container h2:hover {
+  transform: scale(1.01);
+}
+ 
+.partners-logos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.partner-logo-1 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 2s ease-in-out infinite;
+}
+.partner-logo-2 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 2.5s ease-in-out infinite;
+}
+.partner-logo-3 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+.partner-logo-4 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 3.5s ease-in-out infinite;
+}
+.partner-logo-5 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+}
+.partner-logo-6 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 4.5s ease-in-out infinite;
+}
+.partner-logo-7 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 5s ease-in-out infinite;
+}
+.partner-logo-8 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 5.5s ease-in-out infinite;
+}
+.partner-logo-9 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 2s ease-in-out infinite;
+}
+.partner-logo-10 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 2.5s ease-in-out infinite;
+}
+.partner-logo-11 img {
+  width: 250px;
+  height: 120px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+.partner-logo-1 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 33, 33, 0.61);
+}
+.partner-logo-2 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px #f13ab1;
+}
+.partner-logo-3 img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(21, 233, 116, 0.753);
+}
+.partner-logo-4 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px #004890b4;
+}
+.partner-logo-5 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(33, 122, 255, 0.705);
+}
+.partner-logo-6 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
+}
+.partner-logo-7 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(42, 134, 255, 0.712);
+}
+.partner-logo-8 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 74, 170, 0.712);
+}
+.partner-logo-9 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 43, 100, 0.712);
+}
+.partner-logo-10 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
+}
+.partner-logo-11 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 225, 0, 0.912);
+}
+ 
+/* About Tech Brilliance Academy Section */
+.academy-container {
+  position: relative;
+  overflow: hidden; /* Ensures that the video doesn't overflow its container */
+  background-color: #f8f9fa;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height:max-content;
+}
+ 
+.academy-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+ 
+.academy-container h2 {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align:left;
+}
+ 
+.academy-container h1 {
+  font-size: 3.5rem;
+  color: #000;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease-in-out;
+  font-weight: bold;
+  text-align:left;
+}
+ 
+.academy-container h1:hover,
+.academy-container h2:hover {
+  transform: scale(1.01);
+}
+ 
+.academy-container p {
+  display: flex;
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align:justify;
+ 
+}
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+}
+.video-section:hover .play-video-btn {
+  visibility: visible;
+  opacity: 1;
+}
+ 
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the video covers the container */
+  z-index: 0; /* Places the video behind other elements */
+  /* background: url('./1.mp4') no-repeat center center;
+  background-size: cover; */
+  cursor: pointer;
+}
+ 
+/* Play Button Styling */
+.play-video-btn {
+  font-size: 1.3rem;
+  padding: 12px 25px;
+  border: none;
+  background-color: #007acc00;
+  color: #d6f5ff;
+  border-radius: 50%; /* Make the button circular */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
+  position: relative;
+  animation: float 2s ease-in-out infinite;
+}
+ 
+/* Optional: Play Button Icon (using CSS triangle) */
+.play-video-btn::before {
+  content: "";
+  border-style:solid;
+  border-width: 10px 0 10px 16px; /* Create a triangle for the play icon */
+  border-color: transparent transparent transparent #007969; /* Make it white */
+  display: inline-block;
+  margin-right: 3px;
+  margin-top: 2px;
+}
+ 
+/* Button hover effect */
+.play-video-btn:hover {
+  background-color: #d6f5ff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.585);
+}
+ 
+ 
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative; /* Ensure footer stays at the bottom of the content */
+  width: 100%;
+}
+ 
+.footer a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4aff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.footer a:hover {
+  color: #007acc;
+  transform: scale(1.01);
+}
+ 
+.footer a span {
+  font-size: 1.3rem;
+  color: #007acc;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+ 
+.footer a span:hover {
+  color: #333; /* Change the color on hover */
+  transform: scale(1.01); /* Add hover effect */
+}
+ 
+.vision {
+  display: flex;
+  justify-content: space-around;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .academy-container {
+    padding: 40px 20px;
+  }
+ 
+  .academy-container h1 {
+    font-size: 2.8rem;
+  }
+ 
+  .academy-container p {
+    font-size: 1.1rem;
+  }
+ 
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .hiring-partners-container h2 {
+    font-size: 2rem;
+  }
+ 
+  .academy-container h1 {
+    font-size: 2.5rem;
+  }
+ 
+  .academy-container p {
+    font-size: 1rem;
+  }
+ 
+  .partners-logos img {
+    width: 80px;  /* Adjust width for smaller screens */
+    height: 80px; /* Adjust height for smaller screens */
+  }
+}
+ 
+@media (max-width: 480px) {
+  .hiring-partners-container h2 {
+    font-size: 1.8rem;
+  }
+ 
+  .academy-container h1 {
+    font-size: 2rem;
+  }
+ 
+  .academy-container p {
+    font-size: 0.9rem;
+  }
+ 
+  .play-video-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+ 
+  .features {
+    gap: 20px;
+  }
+  .partners-logos img {
+    width: 60px;  /* Further adjust width for smaller screens */
+    height: 60px; /* Further adjust height for smaller screens */
+  }
+}
+ 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+ 

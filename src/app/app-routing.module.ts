@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+
+
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
@@ -38,11 +38,26 @@ import { resetProfessorpasswordComponent } from './components/resetProfessorpass
 import { CertificateComponent } from './components/certificate/certificate.component';
 import { ReviewComponent } from './components/review/review.component';
 import { AddreviewComponent } from './components/addreview/addreview.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AlumnusComponent } from './components/alumnus/alumnus.component';
+import { FounderComponent } from './components/founder/founder.component';
+import { HiringPartnerComponent } from './components/hiring-partner/hiring-partner.component';
+import { HomeFooterComponent } from './components/home-footer/home-footer.component';
+import { SucessStoryComponent } from './components/sucess-story/sucess-story.component';
+import { InstructorComponent } from './components/instructor/instructor.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { WhyStudyWithUsComponent } from './components/why-study-with-us/why-study-with-us.component';
+import { NavbarComponent } from 'angular-bootstrap-md';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { FrequentlyComponent } from './components/frequently/frequently.component';
+import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 
 
 const routes: Routes = [
   
-  {path:'',component:WelcomepageComponent},
+  {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'jobs',component:jobsComponent},
   {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
@@ -78,7 +93,20 @@ const routes: Routes = [
   {path:'editprofessorprofile',component:ProfessorprofileComponent,canActivate:[ProfessorGuard]},
   {path:'edituserprofile',component:UserprofileComponent,canActivate:[UserGuard]},
   {path:'mywishlist',component:MywishlistComponent,canActivate:[RouterGuard]},
-  {path:'mycourses',component:MycoursesComponent,canActivate:[RouterGuard]}
+  {path:'mycourses',component:MycoursesComponent,canActivate:[RouterGuard]},
+  {path:'alumnus',component:AlumnusComponent},
+  {path:'founder',component:FounderComponent},
+  {path:'hiring-partner',component:HiringPartnerComponent},
+  {path:'home-footer',component:HomeFooterComponent},
+  {path:'sucess-story',component:SucessStoryComponent},
+  {path:'instructor',component:InstructorComponent},
+  {path:'slider',component:SliderComponent},
+  {path:'why-study-with-us',component:WhyStudyWithUsComponent},
+  {path:'nav',component:NavComponent},
+  {path:'home',component:HomeComponent},
+  {path:'frequently',component:FrequentlyComponent},
+  {path:'terms-and-condition',component:TermsAndConditionComponent},
+
 ];
 
 @NgModule({

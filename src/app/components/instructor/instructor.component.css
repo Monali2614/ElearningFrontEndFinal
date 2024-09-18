@@ -1,0 +1,72 @@
+/* Overall section styling */
+.instructors-section {
+    padding: 60px;
+    background: linear-gradient(135deg, #e0f7fa, #f9fbe7);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+   
+  .section-title {
+    font-size: 5vw; /* Dynamically adjust based on viewport width */
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+   
+  /* Container for instructor cards */
+  .instructors-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+   
+  /* Individual instructor card styling */
+  .instructor-card {
+    background: white;
+    border-radius: 20px;
+    width: 280px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+   
+  /* Hover effect for card */
+  .instructor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+   
+  /* Instructor name styling */
+  .instructor-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #01579b;
+    margin-bottom: 10px;
+  }
+   
+  /* Instructor role styling */
+  .instructor-role {
+    font-size: 18px;
+    color: #004d40;
+    font-weight: 500;
+  }
+   
+  /* Responsive adjustments for small screens */
+  @media (max-width: 768px) {
+    .instructors-container {
+      flex-direction: column;
+      align-items: center;
+    }
+   
+    .instructor-card {
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+  }

@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f5; /* Light gray background color */
+}
+
+.container {
+    background-color: #d1d7d8; /* Container background */
+    padding: 20px; /* Add padding to the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.ceo-details {
+    text-align: left;
+    padding: 50px;
+    background-color: rgb(167, 191, 199); /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.ceo-image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Maximum image width */
+    border-radius: 5%; /* Rounded corners */
+}
+
+/* Typography */
+.name {
+    font-weight: 700;
+    font-size: 2rem; /* Font size for large screens */
+}
+
+.subtitle {
+    font-size: 30px; /* Subtitle font size */
+    color: #0a0a0a;
+    font-weight: 700; /* Bold */
+}
+
+.companies {
+    font-size: 1rem; /* Company details */
+    font-weight: 400;
+    color: #080a0a;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .ceo-details {
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .name {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .subtitle {
+        font-size: 24px; /* Adjust subtitle font size for mobile */
+    }
+}

@@ -1,0 +1,35 @@
+.faq-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+.faq-title h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.faq-title p {
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.accordion-header {
+    font-weight: bold;
+}
+
+.highlight {
+    color: orange;
+    font-weight: bold;
+}

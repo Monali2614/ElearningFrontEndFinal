@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .alumnus-section {
+    padding: 50px 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .testimonial-card {
+    background-color: #e0f7fa;
+    border-radius: 45px;
+    padding: 20px;
+    width: 100%; /* Makes the card full-width in its column */
+    max-width: auto; /* Ensures the cards stay uniform in width */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .alumnus-image {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+  
+  .stars {
+    font-size: 24px;
+    color: #020202;
+  }
+  
+  .testimonial-content p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .text-center h2 {
+    margin-top: 50px;
+  }
+  

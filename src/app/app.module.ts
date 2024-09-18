@@ -43,6 +43,18 @@ import { RatingPipe } from './models/rating.pipe';
 import { ReviewComponent } from './components/review/review.component';
 import { AddreviewComponent } from './components/addreview/addreview.component';
 import { PopupAdComponent } from './components/popup-ad/popup-ad.component';
+import { SucessStoryComponent } from './components/sucess-story/sucess-story.component';
+import { HomeFooterComponent } from './components/home-footer/home-footer.component';
+import { FounderComponent } from './components/founder/founder.component';
+import { AlumnusComponent } from './components/alumnus/alumnus.component';
+import { HiringPartnerComponent } from './components/hiring-partner/hiring-partner.component';
+import { InstructorComponent } from './components/instructor/instructor.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { WhyStudyWithUsComponent } from './components/why-study-with-us/why-study-with-us.component';
+import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { FrequentlyComponent } from './components/frequently/frequently.component';
+import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 
 
 @NgModule({
@@ -89,6 +101,20 @@ import { PopupAdComponent } from './components/popup-ad/popup-ad.component';
   
     aboutusComponent,
         PopupAdComponent,
+        SucessStoryComponent,
+        HomeFooterComponent,
+        FounderComponent,
+        AlumnusComponent,
+        HiringPartnerComponent,
+        InstructorComponent,
+        SliderComponent,
+        WhyStudyWithUsComponent,
+        NavComponent,
+        HomeComponent,
+        FrequentlyComponent,
+        TermsAndConditionComponent,
+      
+     
 
     
   ],
