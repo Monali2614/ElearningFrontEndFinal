@@ -53,6 +53,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { FrequentlyComponent } from './components/frequently/frequently.component';
 import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
+import { FooterappComponent } from './components/footerapp/footerapp.component';
+
 
 
 const routes: Routes = [
@@ -106,6 +108,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'frequently',component:FrequentlyComponent},
   {path:'terms-and-condition',component:TermsAndConditionComponent},
+  {path:'footerapp',component:FooterappComponent},
+
 
 ];
 

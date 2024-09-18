@@ -4,117 +4,153 @@ body {
     padding: 0;
     background-color: #efe5e5;
     font-family: 'Raleway', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
-
+ 
 /* Container */
 .container {
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-    background-color: #e0f7fa;
+    margin: 0 auto; /* Center the container */
 }
-
+ 
 /* Heading */
 .heading {
     text-align: center;
     font-size: 2.5em;
     font-weight: 800;
+    margin-bottom: 10px;
 }
-
+ 
 .sub-heading {
     text-align: center;
     font-size: 1.2em;
-    color: gray;
+    color: rgb(175, 149, 149);
     margin-bottom: 30px;
 }
-
+ 
 /* Success Stories Layout */
 .success-stories {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
-    padding: 20px;
 }
-
+ 
 /* Side Columns */
 .side {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.left, .right {
     width: 30%; /* Each side takes 30% of the width */
 }
-
+ 
 /* Center Video */
 .center {
     width: 40%; /* Center video takes 40% of the width */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Center align items vertically */
 }
-
+ 
+/* Video Card */
 .video-card {
     width: 100%;
-    height: auto;
+    height: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
-
+ 
 /* Card Styling */
-.quote-card {
+.quote-card, .quote-card-below-video {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    background-color: lightblue;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Make cards responsive */
     transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
 }
-
+ 
 .quote-card:hover {
     transform: scale(1.05);
 }
-
-/* Description Styling */
-.description {
-    font-size: 1em;
-    color: black;
-    padding: 10px;
+ 
+.description p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
 }
-
+ 
+.description p b {
+    font-size: 23px;
+    color: #333;
+}
+ 
+.job-title {
+    font-size: 17px;
+    font-weight: bold;
+}
+ 
+.salary {
+    font-size: 16px;
+    color: gray;
+}
+ 
 /* Responsive Behavior */
 @media (max-width: 1024px) {
     .success-stories {
         flex-direction: column;
         align-items: center;
     }
-
+ 
     .left, .right, .center {
         width: 100%;
-        max-width: 500px;
     }
-
+ 
     .video-card {
         width: 100%;
     }
 }
-
+ 
 @media (max-width: 768px) {
     .heading {
         font-size: 2em;
     }
-
+ 
     .sub-heading {
         font-size: 1em;
     }
-
-    .quote-card {
+ 
+    .quote-card, .quote-card-below-video {
         padding: 15px;
+        height: auto; /* Allow height to adjust based on content */
     }
 }
+ 
+ 
+ 
+ 
+/* Card Below Video */
+.quote-card-below-video {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Make cards responsive */
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-top: 110px; /* Add space above the card */
+}
+ 
+ 
+ 

@@ -1,0 +1,524 @@
+<!-- <app-popup-ad></app-popup-ad>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    style="
+      background: linear-gradient(
+        90deg,
+        rgba(180, 0, 173, 1) 0%,
+        rgba(0, 0, 145, 1) 100%
+      );
+    "
+  >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="logo1">
+          <img src="assets/img/elearningfinalLogo.jpeg" alt="Logo1" />
+        </div>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a style="font-weight: bold" class="nav-link" [routerLink]="['']">
+                <i class="fa fa-home"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                style="font-weight: bold"
+                class="nav-link"
+                href="#scrollspyHeading1"
+              >
+                <i class="fa fa-cog"></i> Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                style="font-weight: bold"
+                class="nav-link"
+                [routerLink]="['/login']"
+              >
+                <i class="fa fa-sign-in"></i> LOGIN
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                style="font-weight: bold"
+                class="nav-link"
+                [routerLink]="['/registration']"
+              >
+                <i class="fa fa-user-plus"></i> CREATE ACCOUNT
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="All">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img
+              class="floating"
+              id="img1"
+              src="assets/img/Tech Brilliance_page-0001.jpg"
+              alt="first image"
+            />
+            <div class="text-overlay">
+              <h5>Platform Integration</h5>
+              If the course is online, upload<br />materials to your learning<br />Management
+              System (LMS)
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              class="floating"
+              id="img2"
+              src="assets/img/Tech Brilliance_page-0003.jpg"
+              alt="second image"
+            />
+            <div class="text-overlay">
+              <h5>Learn Programming with Python</h5>
+              This flexible, self-paced course is<br />structured into multiple
+              modules covering<br />Python basics and advanced topics.
+            </div>
+          </div>
+
+          <div class="slide">
+            <img
+              class="floating"
+              id="img3"
+              src="assets/img/Tech Brilliance_page-0004.jpg"
+              alt="third image"
+            />
+          </div>
+        </div>
+        <a class="prev" (click)="prevSlide()">&#10094;</a>
+        <a class="next" (click)="nextSlide()">&#10095;</a>
+      </div>
+
+      <br /><br />
+      <marquee class="marquee" direction="left"
+        >🔔 "Tech Brilliance is an online educational platform that helps you
+        discover and develop your skills,technology- related skills through
+        expert-led courses."
+      </marquee>
+      <section id="about" class="about about-bg">
+        <section class="logged-out-homepage-body_fill-backgroung_DpRLg">
+          <div
+            class="logged-out-homepage-body_ud-container-with-comman-padding_L5GG1"
+          >
+            <div>
+              <h1
+                id="values-props-and-features-title"
+                class="ud-heading-serif-xxl"
+              >
+                Learning focused on your goals
+              </h1>
+              <div class="value-props-and-features_content_Rk_1Q">
+                <div
+                  role="tablist"
+                  aria-labelledby="values-props-and-features-title"
+                  aria-orientation="vertical"
+                  class="value-props-and-features_values-column__6hDnh"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainWrapper">
+            <div class="secondwrapper">
+              <div class="aboutouter">
+                <div class="about-container">
+                  <div
+                    class="subtext1"
+                    id="subtext1"
+                    (click)="changeImage('assets/img/Tech Brilliance_page-0013Copy.jpg')"
+                  >
+                    <img
+                      alt="sketch of hand working with shapes"
+                      src="https://cms-images.udemycdn.com/96883mtakkm8/7kN9RBFSMFNHzsGWsElMPi/dde73f8d1c47e046f035274e78410590/hands-on-practice.png"
+                      class="features-tab_icon__2eVep"
+                      height="64"
+                      width="64"
+                      loading="lazy"
+                    />
+                    <span class="counter"></span> &nbsp;Hands-on training
+                    <i id="subtext1Icon" class="fa fa-caret-down"></i>
+                  </div>
+                  <div class="innertext1" id="innertext1">
+                    <b
+                      style="
+                        color: darkmagenta;
+                        font-size: larger;
+                        font-weight: bolder;
+                      "
+                    ></b
+                    >Upskill effectively with AI-powered coding exercises,
+                    practice tests, skills assessments, labs, and workspaces.
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-container">
+                <div
+                  class="subtext1"
+                  id="subtext2"
+                  (click)="changeImage('assets/img/22image.jpg')"
+                >
+                  <img
+                    alt="sketch of a certificate"
+                    src="https://cms-images.udemycdn.com/96883mtakkm8/2Xh9YHJustDwCEjn5IlO25/93e9b15c6e74876db0dec63466fcc5a0/certificate.png"
+                    class="features-tab_icon__2eVep"
+                    height="64"
+                    width="64"
+                    loading="lazy"
+                  />
+                  <span class="counter"></span> &nbsp;Certification prep<i
+                    id="subtext2Icon"
+                    class="fa fa-caret-down"
+                  ></i>
+                </div>
+                <div class="innertext1" id="innertext2">
+                  <b
+                    style="
+                      color: darkmagenta;
+                      font-size: larger;
+                      font-weight: bolder;
+                    "
+                  ></b
+                  >Prep for industry-recognized certifications by solving
+                  real-world challenges and earn badges along the way.
+                </div>
+              </div>
+
+              <div class="about-container">
+                <div
+                  class="subtext1"
+                  id="subtext3"
+                  (click)="changeImage('assets/img/Tech Brilliance_page-0005Copy.jpg')"
+                >
+                  <img
+                    alt="sketch of hand working with shapes"
+                    src="https://cms-images.udemycdn.com/96883mtakkm8/6w8plrr7vY9rIY46UuX0q5/2f0a3f0c22e99bd2d430b998c81321f2/empty-state-1.png"
+                    class="features-tab_icon__2eVep"
+                    height="64"
+                    width="64"
+                    loading="lazy"
+                  />
+                  <span class="counter"></span> &nbsp;Insights and analytics
+
+                  <i id="subtext3Icon" class="fa fa-caret-down"></i>
+                </div>
+                <div class="innertext1" id="innertext3">
+                  <b
+                    style="
+                      color: darkmagenta;
+                      font-size: larger;
+                      font-weight: bolder;
+                    "
+                  ></b
+                  >Fast-track goals with advanced insights plus a dedicated
+                  customer success team to help drive effective learning. .
+                </div>
+              </div>
+
+              <div class="about-container">
+                <div
+                  class="subtext1"
+                  id="subtext4"
+                  (click)="changeImage('assets/img/4image.jpg')"
+                >
+                  <img
+                    alt="sketch of hand working with shapes"
+                    src="https://cms-images.udemycdn.com/96883mtakkm8/2tKGBrb1N60wox2Lh8j3tz/7f1528c9f88ea47bd6ebb46f345902c3/organizations-2.png"
+                    class="features-tab_icon__2eVep"
+                    height="64"
+                    width="64"
+                    loading="lazy"
+                  />
+                  <span class="counter"></span> &nbsp;Customizable content
+                  <i id="subtext4Icon" class="fa fa-caret-down"></i>
+                </div>
+                <div class="innertext1" id="innertext4">
+                  <b
+                    style="
+                      color: darkmagenta;
+                      font-size: larger;
+                      font-weight: bolder;
+                    "
+                  ></b
+                  >Create tailored learning paths for team and organization
+                  goals and even host your own content and resources.
+                </div>
+              </div>
+            </div>
+            <div class="imgwrapper">
+              <img [src]="automationImageSrc"  height="400" width="400"/>
+            </div>
+          </div>
+
+
+
+          <section class="trending">
+            <h2 class="trending">Courses Available Now</h2>
+            <div class="container">
+              
+              <div *ngFor="let course of courses" class="course" 
+                [title]="course.coursename" 
+                data-bs-toggle="popover"  
+                data-bs-trigger="hover focus" 
+                data-bs-placement="right"
+                data-bs-custom-class="custom-popover"
+                [attr.data-bs-title]="course.coursename"
+                [attr.data-bs-content]="course.description">
+                
+                <small style="color: navy; text-align: center; cursor: pointer;">
+                  <br><br>
+                  <h3>{{ course.coursename }}</h3>
+                  <p>{{course.coursetype}}</p>
+                  <p>Instructor: {{ course.instructorname }}</p>
+                  <p>{{ course.description }}</p>
+                </small>
+              </div>
+            </div>
+          </section>
+        
+
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3 style="position: relative; left: -40px">Get to Know Us</h3>
+                <ul style="list-style: none; display: block; float: left">
+                  <li style="top: -3px">
+                    <a [routerLink]="['/aboutus']" target="_blank">About Us</a>
+                  </li>
+                  <li style="top: -3px">
+                    <a [routerLink]="['/referearn']" target="_blank">Refer and earn </a>
+                  </li>
+                  <li style="top: -3px">
+                    <a [routerLink]="['/jobs']" target="_blank">jobs </a>
+                  </li>
+                  <li style="top: -3px">
+                    <a [routerLink]="['/placements']" target="_blank">Placement</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3 style="position: relative; left: -40px">Connect with Us</h3>
+                <ul style="list-style: none; display: block; float: left">
+                  <li><a href="#" onclick="window.open('https://www.facebook.com/', '_blank')">Facebook</a></li>
+                  <li><a href="#" onclick="window.open('https://twitter.com/', '_blank')">Twitter</a></li>
+                  <li><a href="#" onclick="window.open('https://instagram.com/', '_blank')">Instagram</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3
+                  id="scrollspyHeading1"
+                  style="position: relative; left: -40px"
+                >
+                  Our services
+                </h3>
+                <ul style="list-style: none; display: block; float: left">
+                  <li><a [routerLink]="['/registration']" target="_blank">Hire From Us</a></li>
+                  <li><a [routerLink]="['/review']" target="_blank">Reviews</a></li>
+                  <li>
+                    <a
+                      href="https://www.google.com/maps/place/20%C2%B055'24.2%22N+77%C2%B046'09.8%22E/@20.9805497,77.7556703,20.25z/data=!4m5!3m4!4b1!8m2!3d20.9233778!4d77.7693775?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      >Company Location</a
+                    >
+                  </li>
+                  <li>
+                    <a [routerLink]="['/privacypolicy']" target="_blank">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/termcondition']" target="_blank">Terms & Condition</a>
+                  </li>
+                  <li><a [routerLink]="['/events']" target="_blank">Events</a></li>
+                </ul>
+
+            
+              </div>
+              <div class="footer-section">
+                <h3 style="position: relative; left: -40px">Contact Us</h3>
+                <ul>
+                  <li>
+                    
+                    Company Name
+                    
+                    Tech Brilliance pvt ltd.
+                    
+                    Company Status : Active
+                    
+                    RoC-Mumbai<br><br>
+                    
+                    Registration Number-363878 <br><br>
+                    Silver Oak Plaza, Pote Patil Road, Amravati, Maharashtra, India. 444602<br><br>
+                    contact : 9226592994
+                 </ul>
+  
+              </div>
+            </div>
+          </footer>
+
+   
+
+          <app-footer> </app-footer>
+        </section>
+      </section>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Design Course</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Logo & Contact Info -->
+          <div class="col-md-3 company-info">
+            <img
+              src="/assets/img/footerlogo.png"
+              alt="Tech Brilliance Academy"
+              class="img-fluid mb-1"
+              width="100px"
+            />
+            <p><i class="fas fa-phone"></i> 9226592994</p>
+            <p><i class="fas fa-envelope"></i> Techbrilliance.in</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Silver Oak Plaza, Pote Road,
+              Amravati, Maharashtra, 444444
+            </p>
+            <p><i class="fas fa-briefcase"></i> Businesses</p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div class="col-md-2">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="#">About</a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">Courses</a>
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Instructor</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">Careers</a>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-md-3">
+            <h5>Useful Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Location</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Categories -->
+          <div class="col-md-2">
+            <h5>Popular Categories</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Software Development</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Cyber Security</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#"
+                  >Data Analyst</a
+                >
+              </li>
+              <li>
+                <a class="text-dark text-decoration-none" href="#">Linux</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe Section -->
+          <div class="col-md-2">
+            <h5>Subscribe</h5>
+            <p>
+              1000+ Our students are subscribed around the world. Don’t be shy,
+              introduce yourself!
+            </p>
+            <form action="#">
+              <div class="d-flex">
+                <input type="email" placeholder="your e-mail" required />
+                <button type="submit" class="btn-send">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+  </body>
+</html>
