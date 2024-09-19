@@ -57,6 +57,7 @@ import { FrequentlyComponent } from './components/frequently/frequently.componen
 import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 import { FooterappComponent } from './components/footerapp/footerapp.component';
 import { CareerComponent } from './components/career/career.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 
 @NgModule({
@@ -117,6 +118,7 @@ import { CareerComponent } from './components/career/career.component';
         TermsAndConditionComponent,
         FooterappComponent,
         CareerComponent,
+        CoursesComponent,
        
       
      

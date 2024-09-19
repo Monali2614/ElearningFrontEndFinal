@@ -55,4 +55,154 @@
     .footer input[type="email"] {
         width: 100%;
     }
+
+    .modal-content {
+  background: linear-gradient(90deg, #afffd3, #b7e1ff);
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-body label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-body input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  padding-left: 35px;
+}
+
+.upload-resume {
+  display: inline-block;
+  background-color: #fff;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #00c5e4;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.terms {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.terms a {
+  color: #00c5e4;
+  text-decoration: none;
+}
+
   }
+  /* Modal Background */
+.modal-content {
+  background: linear-gradient(135deg, #a8e5a3, #b2defd);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Header Styles */
+.modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Custom Input Fields */
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.custom-input {
+  border: none;
+  border-radius: 8px;
+  padding: 10px; /* Normal padding for input */
+  padding-left: 45px; /* Space for the icon */
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  outline: none;
+}
+
+/* Icon inside input */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Distance from the left of the input field */
+  transform: translateY(-50%); /* Vertically align icon */
+  color: #6c757d;
+  font-size: 16px;
+  pointer-events: none; /* Allow input clicks over the icon */
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #00aaff;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* General Form Spacing */
+.modal-body {
+  padding: 20px;
+}
+
+input::placeholder {
+  color: #a0a0a0;
+}
+
+/* Gradient Background */
+body {
+  background: linear-gradient(135deg, #a8e5a3, #b2defd);
+}

@@ -4,16 +4,16 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  max-width:max-content;
+  max-width: max-content;
   margin: 0 auto;
 }
  
 /* Header Styling */
 .header {
-  background-color:#d6f5ff;
+  background-color: #d6f5ff;
   padding: 15px;
-  text-align:left;
-  border-radius: 10px 10px 10px 10px;
+  text-align: left;
+  border-radius: 10px;
 }
  
 .header h2 {
@@ -22,15 +22,40 @@
   margin: 0;
 }
  
+/* Responsive Header Font */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.2rem;
+  }
+}
+ 
 /* 500+ Hiring Partners Section */
 .hiring-partners-container {
   background-color: #f8f9fa;
   margin: 10px;
-  padding: 20px;
+  padding: 5px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-height:max-content;
+  max-height: max-content;
+  animation: fadeIn 1s ease-in-out;
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
  
 .hiring-partners-container:hover {
@@ -43,7 +68,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
-  text-align:left;
+  text-align: left;
 }
  
 .hiring-partners-container h2:hover {
@@ -237,14 +262,26 @@
 /* About Tech Brilliance Academy Section */
 .academy-container {
   position: relative;
-  overflow: hidden; /* Ensures that the video doesn't overflow its container */
+  overflow: hidden;
   background-color: #f8f9fa;
   margin: 10px;
-  padding: 20px;
+  padding: 5px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-height:max-content;
+  max-height: max-content;
+  animation: slideUp 1.2s ease-in-out;
+}
+ 
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
  
 .academy-container:hover {
@@ -284,71 +321,59 @@
   line-height: 1.6;
   margin-bottom: 25px;
   text-align:justify;
- 
 }
-.video-section {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Adjust the height as needed */
-}
-.video-section:hover .play-video-btn {
-  visibility: visible;
-  opacity: 1;
-}
- 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 100px;
-  width: 70%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover; /* Ensures the video covers the container */
-  z-index: 0; /* Places the video behind other elements */
-  /* background: url('./1.mp4') no-repeat center center;
-  background-size: cover; */
-  cursor: pointer;
-}
- 
-/* Play Button Styling */
-.play-video-btn {
-  font-size: 1.3rem;
-  padding: 12px 25px;
-  border: none;
-  background-color: #007acc00;
-  color: #d6f5ff;
-  border-radius: 50%; /* Make the button circular */
-  width: 60px;
-  height: 60px;
+/* .video-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+} */
+ 
+video {
+  max-width: 90%;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .video-container {
+    padding: 10px;
+  }
+ 
+  video {
+    max-width: 95%; /* Allow some padding on smaller screens */
+  }
+ 
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+ 
+@media screen and (max-width: 480px) {
+  .video-container {
+    padding: 5px;
+  }
+ 
+  button {
+    padding: 15px;
+    font-size: 16px; /* Larger button text on smaller screens */
+  }
+}
+ 
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-left: 500px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.341); /* Soft shadow */
-  position: relative;
-  animation: float 2s ease-in-out infinite;
 }
  
-/* Optional: Play Button Icon (using CSS triangle) */
-.play-video-btn::before {
-  content: "";
-  border-style:solid;
-  border-width: 10px 0 10px 16px; /* Create a triangle for the play icon */
-  border-color: transparent transparent transparent #007969; /* Make it white */
-  display: inline-block;
-  margin-right: 3px;
-  margin-top: 2px;
+button:hover {
+  background-color: #0056b3;
 }
- 
-/* Button hover effect */
-.play-video-btn:hover {
-  background-color: #d6f5ff;
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.585);
-}
- 
  
 .footer {
   display: flex;

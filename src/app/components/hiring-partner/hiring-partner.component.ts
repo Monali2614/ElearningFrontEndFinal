@@ -11,13 +11,24 @@ export class HiringPartnerComponent {
  
   @ViewChild('videoPlayer', { static: false }) videoPlayer!: ElementRef<HTMLVideoElement>;
  
-  togglePlay(): void {
+  // Method to toggle video play/pause
+  togglePlayPause() {
     const video = this.videoPlayer.nativeElement;
-    if (this.isPlaying) {
-      video.pause();
-    } else {
+    if (video.paused) {
       video.play();
+    } else {
+      video.pause();
     }
-    this.isPlaying = !this.isPlaying;
+  }
+ 
+  // Handle video play event
+  onPlay() {
+    console.log('Video is playing...');
+  }
+ 
+  // Handle video pause event
+  onPause() {
+    console.log('Video is paused.');
   }
 }
+ 

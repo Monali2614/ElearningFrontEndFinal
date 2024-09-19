@@ -449,9 +449,55 @@
                 >
               </li>
               <!-- Add this in your main component HTML file -->
+<!-- Careers Link -->
 <li>
   <a class="text-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#careersModal">Careers</a>
 </li>
+
+<!-- Modal -->
+<div class="modal fade" id="careersModal" tabindex="-1" aria-labelledby="careersModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="careersModalLabel">Career Options</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-user"></i>
+            <input type="text" class="form-control custom-input" id="name" placeholder="Name">
+          </div>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-envelope"></i>
+            <input type="email" class="form-control custom-input" id="email" placeholder="Email">
+          </div>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-phone"></i>
+            <input type="text" class="form-control custom-input" id="contact" placeholder="Contact no">
+          </div>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-briefcase"></i>
+            <input type="text" class="form-control custom-input" id="work-experience" placeholder="Enter your work experience in years">
+          </div>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-globe"></i>
+            <input type="text" class="form-control custom-input" id="desired-domain" placeholder="Enter your desired domain">
+          </div>
+          <div class="mb-3 input-container">
+            <i class="icon fa fa-file"></i>
+            <input type="file" class="form-control custom-input" id="resume">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary submit-button">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
               
             </ul>

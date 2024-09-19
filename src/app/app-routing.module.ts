@@ -1,9 +1,7 @@
 
-
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
-
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
@@ -55,6 +53,7 @@ import { FrequentlyComponent } from './components/frequently/frequently.componen
 import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 import { FooterappComponent } from './components/footerapp/footerapp.component';
 import { CareerComponent } from './components/career/career.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 
 
@@ -111,6 +110,7 @@ const routes: Routes = [
   {path:'terms-and-condition',component:TermsAndConditionComponent},
   {path:'footerapp',component:FooterappComponent},
   {path:'career',component:CareerComponent},
+  {path:'courses',component:CoursesComponent},
 
 
 ];
